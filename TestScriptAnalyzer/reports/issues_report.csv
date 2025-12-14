@@ -1,0 +1,9 @@
+rule_id,severity,file_path,line_no,description,snippet,tags
+FLAKY_HARD_WAIT,HIGH,tests\test_checkout_flaky.py,8,Hard-coded sleep/wait may cause flaky tests.,time.sleep(4),"flaky,waits"
+FLAKY_HARD_WAIT,HIGH,tests\test_checkout_flaky.py,11,Hard-coded sleep/wait may cause flaky tests.,time.sleep(2),"flaky,waits"
+FLAKY_NO_ASSERT,MEDIUM,tests\test_checkout_flaky.py,6,Test function defined without assertions (hint for manual review).,def test_flaky_waits(page: Page) -> None:,assertions
+FLAKY_NO_ASSERT,MEDIUM,tests\test_edgecases.py,4,Test function defined without assertions (hint for manual review).,def test_no_assert_example(page: Page):,assertions
+FLAKY_NO_ASSERT,MEDIUM,tests\test_login.py,5,Test function defined without assertions (hint for manual review).,def test_add_todo_and_verify(page: Page) -> None:,assertions
+FLAKY_NO_ASSERT,MEDIUM,tests\test_profile_duplicated.py,10,Test function defined without assertions (hint for manual review).,def test_profile_flow_a(page: Page) -> None:,assertions
+FLAKY_NO_ASSERT,MEDIUM,tests\test_profile_duplicated.py,18,Test function defined without assertions (hint for manual review).,def test_profile_flow_b(page: Page) -> None:,assertions
+GENERIC_EXCEPTION_CATCH,HIGH,tests\test_profile_duplicated.py,25,Catching generic Exception hides underlying failures.,except Exception:,error-handling

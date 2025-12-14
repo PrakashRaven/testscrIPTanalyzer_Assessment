@@ -1,0 +1,27 @@
+rules:
+  - id: FLAKY_HARD_WAIT
+    description: "Hard-coded sleep/wait may cause flaky tests."
+    pattern: '\btime\.sleep\(|await page\.wait_for_timeout\('
+    languages: ["py"]
+    severity: "HIGH"
+    tags: ["flaky","waits"]
+
+  - id: FLAKY_NO_ASSERT
+    description: "Test function defined without assertions (hint for manual review)."
+    pattern: '^def\s+test_.*:\s*$'
+    languages: ["py"]
+    severity: "MEDIUM"
+    tags: ["assertions"]
+
+  - id: GENERIC_EXCEPTION_CATCH
+    description: "Catching generic Exception hides underlying failures."
+    pattern: 'except\s+Exception:'
+    languages: ["py"]
+    severity: "HIGH"
+    tags: ["error-handling"]
+
+duplication:
+  min_block_lines: 4
+  ignore_patterns:
+    - '^\s*$'
+    - '^\s*#'
