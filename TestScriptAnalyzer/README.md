@@ -1,7 +1,4 @@
-
-# Full Python Playwright Project - Enhanced (Assessment Ready)
-
-This enhanced package includes:
+This includes:
 - Full Playwright tests (tests/)
 - Analyzer (analyzer/)
 - Documentation (docs/)
@@ -10,9 +7,6 @@ This enhanced package includes:
 - Security notes, fix suggestions, reports, charts, Excel export
 
 ---
-
-# 🚀 HOW TO RUN THE PROJECT
-
 ## 1️⃣ Activate Virtual Environment
 
 ### Windows (PowerShell)
